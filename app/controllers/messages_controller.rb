@@ -31,7 +31,7 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:content, :image)
+    params.require(:message).permit(:content, :image: [])
   end
 
   def set_message
